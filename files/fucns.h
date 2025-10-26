@@ -15,18 +15,24 @@ class country
         char cid;
         float strength = 0;
         int resources = 0;
-        int eco = 0;
+        float rating;
+        int eco = 10000;
+        float timeReq = 12000;
+        float ecoRt = 0;
+        float popRt = 0;
+        float taxes = 0;
 
     public:
         string name;
+        int pop = 1000;
 
         void setCid(char id);
-        void changeAttr(float stgth, int res, int eco);
+        //void changeAttr(float stgth, int res, int eco);
         void getDetails();
         char getId();
 
     
-    country (string name, char cid, float strength, int res, int eco);
+    country (string name, char cid);
 };
 
 void displayCountry(country count);

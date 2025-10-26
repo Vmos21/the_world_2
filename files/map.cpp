@@ -6,13 +6,13 @@ using namespace std;
 #define COL 24
 
 country countArr[7] = {
-    country("North America", '#', 0.95, 3000, 200),
-    country("South America", '@', 0.95, 3000, 200),
-    country("Europe", '$', 0.95, 3000, 200),
-    country("Soviet States", '&', 0.95, 3000, 200),
-    country("Asia", '*', 0.95, 3000, 200),
-    country("Africa", '%', 0.95, 3000, 200),
-    country("Oceania", '?', 0.95, 3000, 200)
+    country("North America", '#'),
+    country("South America", '@'),
+    country("Europe", '$'),
+    country("Soviet States", '&'),
+    country("Asia", '*'),
+    country("Africa", '%'),
+    country("Oceania", '?')
 };
 
 char world[ROW][COL] = {
