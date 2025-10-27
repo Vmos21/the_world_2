@@ -1,19 +1,34 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
+#include "services.h"
 
-class services
+services::services()
 {
-    int eduCenter = 0;
-    int hos = 0;
-    int publService = 0;
-    int jobOpps = 0;
-};
+    return;    
+}
 
-class research
+void services::createSer()
 {
-    int milRes = 0;
-    int ecoRes = 0;
-    int dipRes = 0;
-};
+    return;
+}
+
+void services::showSer()
+{
+    return;
+}
+
+research::research()
+{
+    return;
+}
+
+void research::doRes()
+{
+    return;
+}
+
+void research::showRes()
+{
+    return;
+}

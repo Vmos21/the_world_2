@@ -1,7 +1,11 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+
 #include "fucns.h"
+#include "services.h"
+
+
 using namespace std;
 
 #define WIDTH 40
@@ -10,7 +14,6 @@ void country::setCid(char id)
 {
     this->cid = id;
 }
-
 /*
 void country::changeAttr(int res, int eco)
 {
@@ -32,12 +35,13 @@ char country::getId()
     return this->cid;
 }
 
-country::country (string name, char cid)
+country::country (string name, char id)
 {
     this->name = name;
-    setCid(cid);
+    setCid(id);
     //changeAttr(strength, res, eco);
     cout << "Country Created!" << endl;
+
 };
 
 void displayCountry(country count)

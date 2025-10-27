@@ -2,6 +2,7 @@
 #define FUCN_H
 
 #include <string>
+#include "services.h"
 using namespace std;
 
 // Functions from map.cpp
@@ -22,11 +23,15 @@ class country
         float popRt = 0;
         float taxes = 0;
 
+        services ser = services();
+        research res = research();
+
     public:
         string name;
         int pop = 1000;
 
         void setCid(char id);
+        void setSer(char id);
         //void changeAttr(float stgth, int res, int eco);
         void getDetails();
         char getId();
