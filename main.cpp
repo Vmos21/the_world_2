@@ -13,14 +13,35 @@ void title()
     cout << setw(308) << setfill('=') << "" << endl;
 }
 
+void displayMenu()
+{
+    int opt;
+    //cout << setw(308/2) << setfill(' ') << "SELECT ONE OF THE OPTIONS" << endl;
+    //cout << setw(308/2-strlen("SELECT ONE OF THE OPTIONS")+strlen("1. NEW GAME")/2) << setfill(' ') << "1. NEW GAME" << endl;
+    //cout << setw(308/2-strlen("SELECT ONE OF THE OPTIONS")+strlen("2. SAVED GAME")/2) << setfill(' ') << "2. SAVED GAME" << endl;
+    //cout << setw(308/2-strlen("SELECT ONE OF THE OPTIONS")+strlen("3. EXIT")/2) << setfill(' ') << "3. EXIT" << endl;
+    cout << ">>";
+    cin >> opt;
+
+    switch (opt)
+    {
+    case 1: cout << "NEW GAME" << endl;
+        break;
+
+    case 2: cout << "OPENING GAME" << endl;
+        break;
+
+    case 3: break;
+
+    default: cout << "NO NUMBER ASSINGED." << endl;
+        break;
+    }
+}
+
 int main()
 {
     //title();
-
-    //cout << setw(308/2) << setfill(' ') << "SELECT ONE OF THE OPTIONS" << endl;
-    //cout << setw(308/2-strlen("SELECT ONE OF THE OPTIONS")+strlen("NEW GAME")/2) << setfill(' ') << "NEW GAME" << endl;
-    //cout << setw(308/2-strlen("SELECT ONE OF THE OPTIONS")+strlen("SAVED GAME")/2) << setfill(' ') << "SAVED GAME" << endl;
-    //cout << setw(308/2-strlen("SELECT ONE OF THE OPTIONS")+strlen("EXIT")/2) << setfill(' ') << "EXIT" << endl;
+    //displayMenu();
 
     display_world();
 
