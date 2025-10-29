@@ -1,7 +1,10 @@
 #include <iostream>
+#include <iomanip>
 #include <string>
 
 #include "services.h"
+
+#define WIDTH 40
 
 services::services()
 {
@@ -9,8 +12,10 @@ services::services()
 }
 
 void services::createSer()
-{
-    return;
+{   
+    cout << setw(WIDTH) << setfill('-') << "" << endl;
+    cout << setw((WIDTH-8)/2) << setfill(' ') << "SERVICES" << endl;
+    cout << setw(WIDTH) << setfill('-') << "" << endl;
 }
 
 void services::showSer()
