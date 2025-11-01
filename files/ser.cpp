@@ -33,7 +33,32 @@ class research
             cout << "1. Infrastructure" << "\n2. Military" << "\n3. Economy" << "\n4. Diplomatics" << "\n5. Exit" << endl;
             cout << ">>";
             cin >> opt;
+
+            if (opt == 5)
+            {
+                return;
+            }
+
+            switch (opt)
+            {
+                case 1: this_thread::sleep_for(chrono::seconds(1/(1+this->constRes)*120)); constRes++; cout << "Construction Research Complete." << endl;
+                    break;
+
+                case 2: this_thread::sleep_for(chrono::seconds(1/(1+this->milRes)*120)); this->milRes++; cout << "Military Research Complete." << endl;
+                    break;
+
+                case 3: this_thread::sleep_for(chrono::seconds(1/(1+this->ecoRes)*120)); this->ecoRes++; cout << "Economy Research Complete." << endl;
+                    break;
+
+                case 4: this_thread::sleep_for(chrono::seconds(1/(1+this->dipRes)*120)); this->dipRes++; cout << "Diplomatics Research Complete." << endl;
+                    break;
+
+                default: cout << "No Command assigned." << endl;
+                    break;
+            }
+
         }
+
         void showRes()
         {
             return;
@@ -49,8 +74,6 @@ class services : public research
         int publService = 0;
         int jobOpps = 0;
 
-        int constuctTime = 1/(1+this->constRes)*120;
-
         services ()
         {
             return;
@@ -64,7 +87,7 @@ class services : public research
 
             int opt;
 
-            cout << "what would you like to build ? (Takes " << this->constuctTime << " secs)" << endl;
+            cout << "what would you like to build ? (Takes " << 1/(1+this->constRes)*120 << " secs)" << endl;
             cout << "1. Education Center" << "\n2. Hospital" << "\n3. Public Services" << "\n4. Jobs" << "\n5. Exit" << endl;
             cout << ">>";
             cin >> opt;
@@ -74,7 +97,7 @@ class services : public research
                 return;
             }
             
-            this_thread::sleep_for(chrono::seconds(constuctTime));
+            this_thread::sleep_for(chrono::seconds(1/(1+this->constRes)*120));
 
             switch (opt)
             {
@@ -112,6 +135,33 @@ class services : public research
 int main()
 {
     services s = services();
+
+    while (true)
+    {
+        string opt;
+        cout << ">>>>" ;
+        cin >> opt;
+
+        if (transform == "doServices")
+        {
+
+        }
+
+        else if ()
+        {
+
+        }
+
+        else if ()
+        {
+
+        }
+
+        else
+        {
+            cout << "Wrong Command :(" << endl;
+        }
+    }
 
     s.createSer();
     s.showSer();
