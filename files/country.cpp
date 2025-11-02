@@ -1,3 +1,5 @@
+// Header Files
+
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -9,6 +11,8 @@
 using namespace std;
 
 #define WIDTH 40
+
+// Oject Functions
 
 void country::setCid(char id)
 {
@@ -35,6 +39,8 @@ char country::getId()
     return this->cid;
 }
 
+// Constructor
+
 country::country (string name, char id)
 {
     this->name = name;
@@ -43,6 +49,8 @@ country::country (string name, char id)
     cout << "Country Created!" << endl;
 
 };
+
+// Other Functions
 
 void displayCountry(country count)
 {

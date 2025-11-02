@@ -1,3 +1,5 @@
+// Header Files
+
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -6,7 +8,11 @@
 
 using namespace std;
 
+// Defined Values
+
 #define WIDTH 40
+
+// Classes
 
 class research
 {
@@ -41,7 +47,7 @@ class research
 
             switch (opt)
             {
-                case 1: this_thread::sleep_for(chrono::seconds(1/(1+this->constRes)*120)); constRes++; cout << "Construction Research Complete." << endl;
+                case 1: this_thread::sleep_for(chrono::seconds(1/(1+this->constRes)*120)); this->constRes++; cout << "Construction Research Complete." << endl;
                     break;
 
                 case 2: this_thread::sleep_for(chrono::seconds(1/(1+this->milRes)*120)); this->milRes++; cout << "Military Research Complete." << endl;
@@ -61,6 +67,15 @@ class research
 
         void showRes()
         {
+            cout << setw(WIDTH) << setfill('-') << "" << endl;
+            cout << setw((WIDTH+8)/2) << setfill(' ') << "RESEARCH" << endl;
+            cout << setw(WIDTH) << setfill('-') << "" << endl;
+            cout << "|Infrastructure: " << this->constRes << setw((WIDTH-17-(to_string(this->constRes).length()))) << setfill(' ') << '|' << endl;
+            cout << "|Military: " << this->milRes << setw(WIDTH-11-to_string(this->milRes).length()) << setfill(' ') << '|' << endl;
+            cout << "|Economy: " << this->ecoRes << setw(WIDTH-10-to_string(this->ecoRes).length()) << setfill(' ') << '|' << endl;
+            cout << "|Diplomatics: " << this->dipRes << setw(WIDTH-14-to_string(this->dipRes).length()) << setfill(' ') << '|' << endl;
+            cout << setw(WIDTH) << setfill('-') << "" << endl;
+
             return;
         }
 };
@@ -136,6 +151,7 @@ int main()
 {
     services s = services();
 
+    /*
     while (true)
     {
         string opt;
@@ -162,10 +178,12 @@ int main()
             cout << "Wrong Command :(" << endl;
         }
     }
+    */
 
-    s.createSer();
+    //s.createSer();
     s.showSer();
 
     s.doRes();
+    s.showRes();
     return 0;
 }

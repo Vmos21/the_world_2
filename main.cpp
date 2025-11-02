@@ -1,3 +1,5 @@
+// Included Header Files
+
 #include <iostream>
 #include <iomanip>
 #include <string.h>
@@ -5,6 +7,8 @@
 //#include "files/country.h"
 
 using namespace std;
+
+// Functions
 
 void title()
 {

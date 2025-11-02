@@ -1,6 +1,11 @@
+// Header Files
+
 #include <iostream>
 #include "fucns.h"
+
 using namespace std;
+
+// Definitions
 
 #define ROW 14
 #define COL 24
@@ -14,6 +19,8 @@ country countArr[7] = {
     country("Africa", '%'),
     country("Oceania", '?')
 };
+
+// World Map
 
 char world[ROW][COL] = {
         {'.', '.', '.', '#', '#', '.', '$', '.', '.', '$', '$', '&', '&', '&', '&', '&', '&', '&', '&', '.', '.', '.', '.', '.'}, 
@@ -31,6 +38,8 @@ char world[ROW][COL] = {
         {'.', '.', '.', '.', '.', '.', '.', '.', '.', '%', '%', '.', '.', '.', '.', '.', '.', '.', '.', '?', '.', '.', '?', '?'}, 
         {'.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.', '.'}
 };
+
+// Functions
 
 void display_world()
 {
