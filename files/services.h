@@ -3,7 +3,7 @@
 
 using namespace std;
 
-class services
+class services : public research
 {
     protected:
         int eduCenter = 0;
@@ -20,6 +20,7 @@ class services
 class research
 {
     protected:
+        int constRes = 0;
         int milRes = 0;
         int ecoRes = 0;
         int dipRes = 0;

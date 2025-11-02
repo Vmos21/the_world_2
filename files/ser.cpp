@@ -5,6 +5,7 @@
 #include <string>
 #include <thread>
 #include <chrono>
+#include <algorithm>
 
 using namespace std;
 
@@ -151,26 +152,39 @@ int main()
 {
     services s = services();
 
-    /*
+    
     while (true)
     {
         string opt;
         cout << ">>>>" ;
         cin >> opt;
 
-        if (transform == "doServices")
-        {
+        transform(opt.begin(), opt.end(), opt.begin(), [](char x){return tolower(x);});
 
+
+        if (opt == "doservices")
+        {
+            s.createSer();
         }
 
-        else if ()
+        else if (opt == "showservices")
         {
-
+            s.showSer();
         }
 
-        else if ()
+        else if (opt == "doresearch")
         {
+            s.doRes();
+        }
 
+        else if (opt == "showresearch")
+        {
+            s.showRes();
+        }
+
+        else if (opt == "exit")
+        {
+            break;
         }
 
         else
@@ -178,12 +192,6 @@ int main()
             cout << "Wrong Command :(" << endl;
         }
     }
-    */
 
-    //s.createSer();
-    s.showSer();
-
-    s.doRes();
-    s.showRes();
     return 0;
 }
