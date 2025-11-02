@@ -3,8 +3,10 @@
 
 using namespace std;
 
+// Classes
 class services : public research
 {
+    // Class Vars for Service
     protected:
         int eduCenter = 0;
         int hos = 0;
@@ -13,12 +15,14 @@ class services : public research
 
         services ();
 
+        // Fucns
         void createSer();
         void showSer();
 };
 
 class research
 {
+    // Class vars for Research
     protected:
         int constRes = 0;
         int milRes = 0;
@@ -27,6 +31,7 @@ class research
 
         research ();
 
+        // Fucns
         void doRes();
         void showRes();
 };

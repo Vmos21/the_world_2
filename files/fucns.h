@@ -1,8 +1,10 @@
 #ifndef FUCN_H
 #define FUCN_H
 
+// Header files
 #include <string>
 #include "services.h"
+
 using namespace std;
 
 // Functions from map.cpp
