@@ -35,7 +35,7 @@ void services::createSer()
 
     int opt;
 
-    cout << "what would you like to build ? (Takes " << 1/(1+this->constRes)*120 << " secs)" << endl;
+    cout << "what would you like to build ? (Takes " << (1/(1+this->constRes))*120 << " secs)" << endl;
     cout << "1. Education Center" << "\n2. Hospital" << "\n3. Public Services" << "\n4. Jobs" << "\n5. Exit" << endl;
     cout << ">>";
     cin >> opt;
@@ -45,7 +45,7 @@ void services::createSer()
         return;
     }
             
-    this_thread::sleep_for(chrono::seconds(1/(1+this->constRes)*120));
+    this_thread::sleep_for(chrono::seconds((1/(1+this->constRes))*120));
 
     switch (opt)
     {
@@ -99,16 +99,16 @@ void research::doRes()
 
     switch (opt)
     {
-        case 1: this_thread::sleep_for(chrono::seconds(1/(1+this->constRes)*120)); this->constRes++; cout << "Construction Research Complete." << endl;
+        case 1: this_thread::sleep_for(chrono::seconds((1/(1+this->constRes))*120)); this->constRes++; cout << "Construction Research Complete." << endl;
             break;
 
-        case 2: this_thread::sleep_for(chrono::seconds(1/(1+this->milRes)*120)); this->milRes++; cout << "Military Research Complete." << endl;
+        case 2: this_thread::sleep_for(chrono::seconds((1/(1+this->milRes))*120)); this->milRes++; cout << "Military Research Complete." << endl;
             break;
 
-        case 3: this_thread::sleep_for(chrono::seconds(1/(1+this->ecoRes)*120)); this->ecoRes++; cout << "Economy Research Complete." << endl;
+        case 3: this_thread::sleep_for(chrono::seconds((1/(1+this->ecoRes))*120)); this->ecoRes++; cout << "Economy Research Complete." << endl;
             break;
 
-        case 4: this_thread::sleep_for(chrono::seconds(1/(1+this->dipRes)*120)); this->dipRes++; cout << "Diplomatics Research Complete." << endl;
+        case 4: this_thread::sleep_for(chrono::seconds((1/(1+this->dipRes))*120)); this->dipRes++; cout << "Diplomatics Research Complete." << endl;
             break;
 
         default: cout << "No Command assigned." << endl;
