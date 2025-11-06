@@ -72,6 +72,16 @@ void displayMenu()
 
 void newGame()
 {
+
     display_world();
+
+    char playeropt;
+    while (true)
+    {
+        cout << "Which Country would you like to play as ?" << endl;
+        cout << ">>" << endl;
+
+        
+    }
 
 }
