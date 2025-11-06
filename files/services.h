@@ -4,21 +4,6 @@
 using namespace std;
 
 // Classes
-class services : public research
-{
-    // Class Vars for Service
-    protected:
-        int eduCenter = 0;
-        int hos = 0;
-        int publService = 0;
-        int jobOpps = 0;
-
-        services ();
-
-        // Fucns
-        void createSer();
-        void showSer();
-};
 
 class research
 {
@@ -34,6 +19,22 @@ class research
         // Fucns
         void doRes();
         void showRes();
+};
+
+class services: public research
+{
+    // Class Vars for Service
+    protected:
+        int eduCenter = 0;
+        int hos = 0;
+        int publService = 0;
+        int jobOpps = 0;
+
+        services ();
+
+        // Fucns
+        void createSer();
+        void showSer();
 };
 
 #endif

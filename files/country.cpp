@@ -29,7 +29,7 @@ void country::changeAttr(int res, int eco)
 void country::getDetails()
 {
     cout << "|ID: " << this->cid << setw(WIDTH-6) << setfill(' ') << '|' << endl;
-    cout << "|MILITARY STRENGTH: " << this->strength << setw(WIDTH-(21+to_string(this->strength).length()/2)) << setfill(' ') << '|' << endl;
+    cout << "|MILITARY STRENGTH: " << this->strength << setw(WIDTH-20-(to_string(this->strength).length())/8) << setfill(' ') << '|' << endl;
     cout << "|NO. OF RESOURCES: " << this->resources << setw(WIDTH-(19+to_string(this->resources).length())) << '|' << endl;
     cout << "|ECONOMY: " << this->eco << setw(WIDTH-(10+to_string(this->eco).length())) << '|' << endl;
 }

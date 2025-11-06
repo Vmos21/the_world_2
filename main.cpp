@@ -20,10 +20,10 @@ void title()
 void displayMenu()
 {
     int opt;
-    //cout << setw(308/2) << setfill(' ') << "SELECT ONE OF THE OPTIONS" << endl;
-    //cout << setw(308/2-strlen("SELECT ONE OF THE OPTIONS")+strlen("1. NEW GAME")/2) << setfill(' ') << "1. NEW GAME" << endl;
-    //cout << setw(308/2-strlen("SELECT ONE OF THE OPTIONS")+strlen("2. SAVED GAME")/2) << setfill(' ') << "2. SAVED GAME" << endl;
-    //cout << setw(308/2-strlen("SELECT ONE OF THE OPTIONS")+strlen("3. EXIT")/2) << setfill(' ') << "3. EXIT" << endl;
+    cout << setw(308/2) << setfill(' ') << "SELECT ONE OF THE OPTIONS" << endl;
+    cout << setw(308/2-strlen("SELECT ONE OF THE OPTIONS")+strlen("1. NEW GAME")/2) << setfill(' ') << "1. NEW GAME" << endl;
+    cout << setw(308/2-strlen("SELECT ONE OF THE OPTIONS")+strlen("2. SAVED GAME")/2) << setfill(' ') << "2. SAVED GAME" << endl;
+    cout << setw(308/2-strlen("SELECT ONE OF THE OPTIONS")+strlen("3. EXIT")/2) << setfill(' ') << "3. EXIT" << endl;
     cout << ">>";
     cin >> opt;
 
