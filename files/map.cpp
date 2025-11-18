@@ -94,11 +94,11 @@ void display_world()
 
 void countryDetails(char id)
 {
-    for (int i = 0; i < size(countArr); i++)
+    for (country c : countArr)
     {
-        if (id == countArr[i].getId())
+        if (id == c.getId())
         {
-            displayCountry(countArr[i]);
+            displayCountry(c);
         }
     }
 }

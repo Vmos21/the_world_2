@@ -3,6 +3,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string.h>
+#include <strings.h>
 #include "files/fucns.h"
 //#include "files/country.h"
 
@@ -78,8 +79,39 @@ void newGame()
     char playeropt;
     while (true)
     {
-        cout << "Which Country would you like to play as ?" << endl;
-        cout << ">>" << endl;
+        char id;
+
+        while (true)
+        {
+            cout << "Which Country would you like to play as ?" << endl;
+            cout << ">>";
+
+            countryDetails(id);
+            
+            char opt;
+
+            while (true)
+            {
+                cout << "Do you want to proceed to govern this country? (y/n)";
+                cin >> opt;
+
+                if (tolower(opt) != 'y' && tolower(opt) != 'n')
+                {
+                    cout << "Invalid :(";
+                }
+
+                else
+                {
+                    break;
+                }
+
+            }
+            if (tolower(opt) == 'y')
+            {
+                
+            }
+        }
+
 
         
         

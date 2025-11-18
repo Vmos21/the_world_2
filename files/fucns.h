@@ -24,6 +24,7 @@ class country: public services
         float ecoRt = 0;
         float popRt = 0;
         float taxes = 0;
+        int role = 0; // 0-> Neutral 1-> You 2-> Enemy
 
     public:
         string name;
