@@ -108,7 +108,7 @@ void newGame()
             }
             if (tolower(opt) == 'y')
             {
-                getCountry(id).setPlayer()
+                getCountry(id).setPlayer();
                 break;
             }
         }
