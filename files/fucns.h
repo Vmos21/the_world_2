@@ -41,5 +41,6 @@ class country: public services
 };
 
 void displayCountry(country count);
+country getCountry(char id);
 
 #endif

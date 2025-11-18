@@ -92,13 +92,18 @@ void display_world()
     }
 }
 
-void countryDetails(char id)
+country getCountry(char id)
 {
-    for (country c : countArr)
+    for (country c: countArr)
     {
         if (id == c.getId())
         {
-            displayCountry(c);
+            return c;
         }
     }
+}
+
+void countryDetails(char id)
+{
+    displayCountry(getCountry(id));
 }
