@@ -101,6 +101,10 @@ country getCountry(char id)
             return c;
         }
     }
+
+    cout << "Id Invalid";
+    country bad = country("", ';');
+    return bad;
 }
 
 void countryDetails(char id)

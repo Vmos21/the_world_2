@@ -86,6 +86,8 @@ void newGame()
             cout << "Which Country would you like to play as ?" << endl;
             cout << ">>";
 
+            cin >> id;
+
             countryDetails(id);
             
             char opt;
@@ -97,7 +99,7 @@ void newGame()
 
                 if (tolower(opt) != 'y' && tolower(opt) != 'n')
                 {
-                    cout << "Invalid :(";
+                    cout << "Invalid :(" << endl;
                 }
 
                 else
@@ -109,7 +111,7 @@ void newGame()
             if (tolower(opt) == 'y')
             {
                 getCountry(id).setPlayer();
-                break;
+                return;
             }
         }
 
