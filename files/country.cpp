@@ -18,6 +18,11 @@ void country::setCid(char id)
 {
     this->cid = id;
 }
+
+void country::setPlayer()
+{
+    this->role = 1;
+}
 /*
 void country::changeAttr(int res, int eco)
 {

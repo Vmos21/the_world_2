@@ -31,6 +31,7 @@ class country: public services
         int pop = 1000;
 
         void setCid(char id);
+        void setPlayer();
         //void changeAttr(float stgth, int res, int eco);
         void getDetails();
         char getId();
