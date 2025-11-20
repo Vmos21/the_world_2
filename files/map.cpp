@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include "fucns.h"
+#include <cstdlib>
 
 using namespace std;
 
@@ -110,4 +111,13 @@ country getCountry(char id)
 void countryDetails(char id)
 {
     displayCountry(getCountry(id));
+}
+
+void clearConsole()
+{
+    #ifdef _WIN32
+        system("cls")
+    #else
+        system("clear");
+    #endif
 }

@@ -45,9 +45,9 @@ void displayMenu()
 {
     int opt;
     cout << "ENTER THE NO. NEXT TO ONE OF THE OPTIONS" << endl;
-    cout << "NEW GAME" << endl;
-    cout << "OPEN SAVED GAME" << endl;
-    cout << "EXIT" << endl;
+    cout << "1. NEW GAME" << endl;
+    cout << "2. OPEN SAVED GAME" << endl;
+    cout << "3. EXIT" << endl;
 
     while (true)
     {
@@ -57,6 +57,7 @@ void displayMenu()
         switch (opt)
         {
         case 1: cout << "NEW GAME"<< endl;
+            clearConsole();
             newGame();
             return;
 
@@ -73,7 +74,6 @@ void displayMenu()
 
 void newGame()
 {
-
     display_world();
 
     char playeropt;
@@ -111,6 +111,7 @@ void newGame()
             if (tolower(opt) == 'y')
             {
                 getCountry(id).setPlayer();
+                cout << "\r";
                 return;
             }
         }
