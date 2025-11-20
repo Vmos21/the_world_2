@@ -37,7 +37,6 @@ class country: public services
         void getDetails();
         char getId();
 
-    
     country (string name, char cid);
 };
 

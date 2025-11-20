@@ -51,8 +51,6 @@ country::country (string name, char id)
     this->name = name;
     setCid(id);
     //changeAttr(strength, res, eco);
-    cout << "Country Created!" << endl;
-
 };
 
 // Other Functions

@@ -102,15 +102,18 @@ country getCountry(char id)
             return c;
         }
     }
-
-    cout << "Id Invalid";
-    country bad = country("", ';');
-    return bad;
 }
 
 void countryDetails(char id)
 {
-    displayCountry(getCountry(id));
+    try
+    {
+        displayCountry(getCountry(id));
+    }
+    catch (const std::exception &e)
+    {
+        cout << "Error:" << e.what() << endl;
+    }
 }
 
 void clearConsole()
