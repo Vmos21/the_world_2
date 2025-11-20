@@ -3,6 +3,7 @@
 #include <iostream>
 #include "fucns.h"
 #include <cstdlib>
+#include <stdexcept>
 
 using namespace std;
 
@@ -102,6 +103,8 @@ country getCountry(char id)
             return c;
         }
     }
+
+    throw runtime_error("The Country Doesn't exist on the map :(");
 }
 
 void countryDetails(char id)
@@ -110,9 +113,9 @@ void countryDetails(char id)
     {
         displayCountry(getCountry(id));
     }
-    catch (const std::exception &e)
+    catch (const exception& e)
     {
-        cout << "Error:" << e.what() << endl;
+        cout << e.what() << endl;
     }
 }
 
