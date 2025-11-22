@@ -84,7 +84,7 @@ void newGame()
 
         while (true)
         {
-            cout << "Which Country would you like to play as ?" << endl;
+            cout << "Which Country would you like to play as ? " << endl;
             cout << ">>";
 
             cin >> id;
@@ -100,7 +100,7 @@ void newGame()
 
             while (true && c == 0)
             {
-                cout << "Do you want to proceed to govern this country? (y/n)";
+                cout << "Do you want to proceed to govern this country? (y/n) ";
                 cin >> opt;
 
                 if (tolower(opt) != 'y' && tolower(opt) != 'n')
@@ -117,7 +117,8 @@ void newGame()
             if (tolower(opt) == 'y' && c == 0)
             {
                 getCountry(id).setPlayer();
-                cout << "\r";
+                clearConsole();
+                cout << "Player set" << endl;
                 return;
             }
         }
