@@ -77,6 +77,7 @@ void newGame()
     display_world();
 
     char playeropt;
+
     while (true)
     {
         char id;
@@ -88,11 +89,16 @@ void newGame()
 
             cin >> id;
 
-            countryDetails(id);
+            int c = countryDetails(id);
+
+            if (c == 1)
+            {
+                continue;
+            }
             
             char opt;
 
-            while (true)
+            while (true && c == 0)
             {
                 cout << "Do you want to proceed to govern this country? (y/n)";
                 cin >> opt;
@@ -108,7 +114,7 @@ void newGame()
                 }
 
             }
-            if (tolower(opt) == 'y')
+            if (tolower(opt) == 'y' && c == 0)
             {
                 getCountry(id).setPlayer();
                 cout << "\r";

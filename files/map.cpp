@@ -104,19 +104,18 @@ country getCountry(char id)
         }
     }
 
-    throw runtime_error("The Country Doesn't exist on the map :(");
+    return country(" ", ' ');
 }
 
-void countryDetails(char id)
+int countryDetails(char id)
 {
-    try
+    if (getCountry(id).getId() == ' ')
     {
-        displayCountry(getCountry(id));
+        cout << "The country Does not exist :(" << endl;
+        return 1;
     }
-    catch (const exception& e)
-    {
-        cout << e.what() << endl;
-    }
+    displayCountry(getCountry(id));
+    return 0;
 }
 
 void clearConsole()

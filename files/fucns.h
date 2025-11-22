@@ -9,7 +9,7 @@ using namespace std;
 
 // Functions from map.cpp
 void display_world();
-void countryDetails(char id);
+int countryDetails(char id);
 void clearConsole();
 
 // Classes and Functions from country.cpp
