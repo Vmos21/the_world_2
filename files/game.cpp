@@ -77,10 +77,10 @@ void startGame()
 {
     while (true)
     {
-        string *input;
-        prompt(*input);
+        string input;
+        prompt(input);
 
-        cout << "Output: " << input << endl;
+        tolower(input);
 
     }
 }
