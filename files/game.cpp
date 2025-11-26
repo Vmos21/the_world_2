@@ -1,5 +1,8 @@
 #include <iostream>
 #include "fucns.h"
+#include <string>
+
+using namespace std;
 
 void newGame()
 {
@@ -48,6 +51,7 @@ void newGame()
                 getCountry(id).setPlayer();
                 clearConsole();
                 cout << "Player set" << endl;
+                startGame();
                 return;
             }
         }
@@ -57,4 +61,26 @@ void newGame()
         
     }
 
+}
+
+// Creating a common prompt
+
+void prompt(string &input)
+{
+    cout << ">>";
+    cin >> input;
+}
+
+// Starting the game for the first time
+
+void startGame()
+{
+    while (true)
+    {
+        string *input;
+        prompt(*input);
+
+        cout << "Output: " << input << endl;
+
+    }
 }

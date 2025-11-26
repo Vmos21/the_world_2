@@ -46,5 +46,7 @@ country getCountry(char id);
 // Fucns from game
 
 void newGame();
+void prompt(string &input);
+void startGame();
 
 #endif
