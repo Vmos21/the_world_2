@@ -1,6 +1,7 @@
 #include <iostream>
 #include "fucns.h"
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
@@ -80,7 +81,25 @@ void startGame()
         string input;
         prompt(input);
 
-        tolower(input);
+        transform(input.begin(), input.end(), input.begin(), [](char x){return tolower(x);});
 
+        if (input == "exit")
+        {
+            return;
+        }
+
+        if (input == "clear")
+        {
+            clearConsole();
+        }
+
+        if (input == "countrydet")
+        {
+            char id;
+            cout << "Enter ID:";
+            cin >> id;
+
+            countryDetails(id);
+        }
     }
 }
