@@ -31,6 +31,14 @@ void country::changeAttr(int res, int eco)
 }
 */
 
+country country::getPlayer()
+{
+    if (this->role == 1)
+    {
+        return *this;
+    }
+}
+
 void country::getDetails()
 {
     cout << "|ID: " << this->cid << setw(WIDTH-6) << setfill(' ') << '|' << endl;

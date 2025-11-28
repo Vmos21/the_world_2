@@ -55,11 +55,7 @@ void newGame()
                 startGame();
                 return;
             }
-        }
-
-
-        
-        
+        }   
     }
 
 }
@@ -88,12 +84,12 @@ void startGame()
             return;
         }
 
-        if (input == "clear")
+        else if (input == "clear")
         {
             clearConsole();
         }
 
-        if (input == "countrydet")
+        else if (input == "countrydet")
         {
             char id;
             cout << "Enter ID:";
@@ -101,5 +97,16 @@ void startGame()
 
             countryDetails(id);
         }
+
+        else if (input == "reser dores")
+        {
+            
+        }
+
+        else if (input == "reser showres")
+        {
+
+        }
+
     }
 }
