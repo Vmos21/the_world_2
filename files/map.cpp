@@ -118,6 +118,18 @@ int countryDetails(char id)
     return 0;
 }
 
+char getPlayer()
+{
+    for (country c: countArr)
+    {
+        if (c.getRole() == 0)
+        {
+            return c.getId();
+        }
+    }
+    return ' ';
+}
+
 void clearConsole()
 {
     #ifdef _WIN32
