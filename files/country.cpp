@@ -31,13 +31,15 @@ void country::changeAttr(int res, int eco)
 }
 */
 
-country country::getPlayer()
+int country::getRole()
 {
     if (this->role == 1)
     {
-        return *this;
+        return 0;
     }
+    return 1;
 }
+
 
 void country::getDetails()
 {

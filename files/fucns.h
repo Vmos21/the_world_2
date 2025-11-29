@@ -36,7 +36,7 @@ class country: public services
         //void changeAttr(float stgth, int res, int eco);
         void getDetails();
         char getId();
-        country getPlayer();
+        int getRole();
 
     country (string name, char cid);
 };
