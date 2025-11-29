@@ -101,7 +101,7 @@ void startGame()
 
         else if (input == "reser dores")
         {
-            getCountry(getPlayer()).doRes();
+            //getCountry(getPlayer()).doRes();
         }
 
         else if (input == "reser showres")
