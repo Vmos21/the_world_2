@@ -1,5 +1,6 @@
 #include <iostream>
 #include "fucns.h"
+#include "services.h"
 #include <string>
 #include <algorithm>
 
@@ -100,7 +101,7 @@ void startGame()
 
         else if (input == "reser dores")
         {
-            
+            getCountry(getPlayer()).doRes();
         }
 
         else if (input == "reser showres")

@@ -103,7 +103,6 @@ country getCountry(char id)
             return c;
         }
     }
-
     return country(" ", ' ');
 }
 
