@@ -90,13 +90,18 @@ void startGame()
             clearConsole();
         }
 
+        else if (input == "map")
+        {
+            display_world();
+        }
+
         else if (input == "countrydet")
         {
-            char id;
+            char cid;
             cout << "Enter ID:";
-            cin >> id;
+            cin >> cid;
 
-            countryDetails(id);
+            countryDetails(cid);
         }
 
         else if (input == "dores")
@@ -104,9 +109,24 @@ void startGame()
             getCountry(id).doRes();
         }
 
-        else if (input == "reser showres")
+        else if (input == "showres")
         {
-            return;
+            getCountry(id).showRes();
+        }
+
+        else if (input == "createser")
+        {
+            getCountry(id).createSer();
+        }
+
+        else if (input == "showser")
+        {
+            getCountry(id).showSer();
+        }
+
+        else
+        {
+            cout << "Invald command :(" << endl;
         }
 
     }

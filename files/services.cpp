@@ -37,7 +37,7 @@ void services::createSer()
 
     cout << "what would you like to build ? (Takes " << (1/(1+this->constRes))*120 << " secs)" << endl;
     cout << "1. Education Center" << "\n2. Hospital" << "\n3. Public Services" << "\n4. Jobs" << "\n5. Exit" << endl;
-    cout << ">>";
+    cout << "\033[1;32m>>>\033[0m";
     cin >> opt;
     
     if (opt == 5)
@@ -89,7 +89,7 @@ void research::doRes()
 
     cout << "what research would you like to conduct ?" << endl;
     cout << "1. Infrastructure" << "\n2. Military" << "\n3. Economy" << "\n4. Diplomatics" << "\n5. Exit" << endl;
-    cout << ">>";
+    cout << "\033[1;32m>>>\033[0m";
     cin >> opt;
 
     if (opt == 5)
