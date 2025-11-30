@@ -17,6 +17,8 @@ class research
         research ();
 
         // Fucns
+    public:
+    
         void doRes();
         void showRes();
 };
@@ -33,6 +35,8 @@ class services: public research
         services ();
 
         // Fucns
+    public:
+
         void createSer();
         void showSer();
 };

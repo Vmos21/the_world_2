@@ -117,16 +117,15 @@ int countryDetails(char id)
     return 0;
 }
 
-char getPlayer()
+void playerRes()
 {
     for (country c: countArr)
     {
         if (c.getRole() == 0)
         {
-            return c.getId();
+            c.doRes();
         }
     }
-    return ' ';
 }
 
 void clearConsole()
