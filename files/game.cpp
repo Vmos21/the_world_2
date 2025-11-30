@@ -124,6 +124,8 @@ void startGame()
             getCountry(id).showSer();
         }
 
+        // WE NEED TO ADD THREADS TO SREVICES OK !!
+
         else
         {
             cout << "Invald command :(" << endl;
