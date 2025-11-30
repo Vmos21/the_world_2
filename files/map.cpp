@@ -117,17 +117,6 @@ int countryDetails(char id)
     return 0;
 }
 
-void playerRes()
-{
-    for (country c: countArr)
-    {
-        if (c.getRole() == 0)
-        {
-            c.doRes();
-        }
-    }
-}
-
 void clearConsole()
 {
     #ifdef _WIN32

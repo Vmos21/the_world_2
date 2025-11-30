@@ -11,7 +11,6 @@ using namespace std;
 void display_world();
 int countryDetails(char id);
 void clearConsole();
-void playerRes();
 
 // Classes and Functions from country.cpp
 class country: public services

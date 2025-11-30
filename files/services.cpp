@@ -100,22 +100,20 @@ void research::doRes()
     switch (opt)
     {
         case 1: this_thread::sleep_for(chrono::seconds((1/(1+this->constRes))*120)); this->constRes++; cout << "Construction Research Complete." << endl;
-            break;
+            return;
 
         case 2: this_thread::sleep_for(chrono::seconds((1/(1+this->milRes))*120)); this->milRes++; cout << "Military Research Complete." << endl;
-            break;
+            return;
 
         case 3: this_thread::sleep_for(chrono::seconds((1/(1+this->ecoRes))*120)); this->ecoRes++; cout << "Economy Research Complete." << endl;
-            break;
+            return;
 
         case 4: this_thread::sleep_for(chrono::seconds((1/(1+this->dipRes))*120)); this->dipRes++; cout << "Diplomatics Research Complete." << endl;
-            break;
+            return;
 
         default: cout << "No Command assigned." << endl;
-            break;
+            return;
     }
-    
-    return;
 }
 
 void research::showRes()

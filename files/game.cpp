@@ -6,6 +6,8 @@
 
 using namespace std;
 
+char id;
+
 void newGame()
 {
     display_world();
@@ -14,8 +16,6 @@ void newGame()
 
     while (true)
     {
-        char id;
-
         while (true)
         {
             cout << "Which Country would you like to play as ? " << endl;
@@ -99,9 +99,9 @@ void startGame()
             countryDetails(id);
         }
 
-        else if (input == "reser dores")
+        else if (input == "dores")
         {
-            playerRes();
+            getCountry(id).doRes();
         }
 
         else if (input == "reser showres")
