@@ -44,12 +44,18 @@ void services::createSer()
     {
         return;
     }
-            
-    this_thread::sleep_for(chrono::seconds((1/(1+this->constRes))*120));
+    std::thread([this, opt]
+        {
+            this_thread::sleep_for(chrono::seconds((1/(1+this->constRes))*120));
+            ser2(opt);
+        }).detach();
+}
 
+void services::ser2(int opt)
+{
     switch (opt)
     {
-        case 1: eduCenter++; cout << "Education Center Has been built." << endl;
+        case 1: this->eduCenter++; cout << "Education Center Has been built." << endl;
             break;
 
         case 2: this->hos++; cout << "Hospital has been built." << endl;

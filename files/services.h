@@ -39,6 +39,7 @@ class services: public research
 
         void createSer();
         void showSer();
+        void ser2(int opt);
 };
 
 #endif
