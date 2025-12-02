@@ -125,6 +125,7 @@ void startGame()
         }
 
         // WE NEED TO ADD THREADS TO SREVICES OK !!
+            // CREATED THREADS IN SERVICES.CPP
 
         else
         {
