@@ -46,7 +46,7 @@ void services::createSer()
     }
     std::thread([this, opt]
         {
-            this_thread::sleep_for(chrono::seconds((1/(1+this->constRes))*120));
+            //this_thread::sleep_for(chrono::seconds((1/(1+this->constRes))*120));
             ser2(opt);
         }).detach();
 }
@@ -56,19 +56,19 @@ void services::ser2(int opt)
     switch (opt)
     {
         case 1: this->eduCenter++; cout << "Education Center Has been built." << endl;
-            break;
+            return;
 
         case 2: this->hos++; cout << "Hospital has been built." << endl;
-            break;
+            return;
             
         case 3: this->publService++; cout << "Public Services has been built." << endl;
-            break;
+            return;
 
         case 4: this->jobOpps++; cout << "More Jobs are created." << endl;
-            break;
+            return;
 
         default: cout << "No Command assigned." << endl;
-            break;
+            return;
     }
 }
 
@@ -103,18 +103,27 @@ void research::doRes()
         return;
     }
 
+    std::thread([this, opt]
+        {
+            //this_thread::sleep_for(chrono::seconds((1/(1+this->constRes))*120));
+            res2(opt);
+        }).detach();
+}
+
+void research::res2(int opt)
+{
     switch (opt)
     {
-        case 1: this_thread::sleep_for(chrono::seconds((1/(1+this->constRes))*120)); this->constRes++; cout << "Construction Research Complete." << endl;
+        case 1: this->constRes++; cout << "Construction Research Complete." << endl;
             return;
 
-        case 2: this_thread::sleep_for(chrono::seconds((1/(1+this->milRes))*120)); this->milRes++; cout << "Military Research Complete." << endl;
+        case 2: this->milRes++; cout << "Military Research Complete." << endl;
             return;
 
-        case 3: this_thread::sleep_for(chrono::seconds((1/(1+this->ecoRes))*120)); this->ecoRes++; cout << "Economy Research Complete." << endl;
+        case 3: this->ecoRes++; cout << "Economy Research Complete." << endl;
             return;
 
-        case 4: this_thread::sleep_for(chrono::seconds((1/(1+this->dipRes))*120)); this->dipRes++; cout << "Diplomatics Research Complete." << endl;
+        case 4: this->dipRes++; cout << "Diplomatics Research Complete." << endl;
             return;
 
         default: cout << "No Command assigned." << endl;

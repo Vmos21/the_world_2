@@ -21,6 +21,7 @@ class research
     
         void doRes();
         void showRes();
+        void res2(int opt);
 };
 
 class services: public research
