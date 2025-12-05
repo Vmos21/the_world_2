@@ -126,6 +126,8 @@ void startGame()
 
         // WE NEED TO ADD THREADS TO SREVICES OK !!
             // CREATED THREADS IN SERVICES.CPP
+        // FIX IT
+            // NEW PROBELM WE CANNOT UPDATE THE CLASS VARIABLES
 
         else
         {

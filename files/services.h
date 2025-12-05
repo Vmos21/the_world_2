@@ -15,7 +15,6 @@ class research
         void showRes();
         void res2(int opt);
     
-    protected:
 
     // Variables
         int constRes = 0;
@@ -39,7 +38,7 @@ class services: public research
         void ser2(int opt);
 
     protected:
-    
+
         // Variables
 
         int eduCenter = 0;

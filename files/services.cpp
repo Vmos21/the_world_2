@@ -47,8 +47,8 @@ void services::createSer()
     std::thread([this, opt]
         {
             //this_thread::sleep_for(chrono::seconds((1/(1+this->constRes))*120));
-            ser2(opt);
-        }).detach();
+            this->ser2(opt);
+        }).join();
 }
 
 void services::ser2(int opt)
@@ -56,7 +56,7 @@ void services::ser2(int opt)
     switch (opt)
     {
         case 1: this->eduCenter++; cout << "Education Center Has been built." << endl;
-            return;
+            break;
 
         case 2: this->hos++; cout << "Hospital has been built." << endl;
             return;
@@ -77,7 +77,7 @@ void services::showSer()
     cout << setw(WIDTH) << setfill('-') << "" << endl;
     cout << setw((WIDTH+8)/2) << setfill(' ') << "SERVICES" << endl;
     cout << setw(WIDTH) << setfill('-') << "" << endl;
-    cout << "|Edu Centers: " << this->eduCenter << setw((WIDTH-14-(to_string(this->eduCenter).length()))) << setfill(' ') << '|' << endl;
+    cout << "|Edu Centers: " << eduCenter << setw((WIDTH-14-(to_string(this->eduCenter).length()))) << setfill(' ') << '|' << endl;
     cout << "|Hospitals: " << this->hos << setw(WIDTH-12-to_string(this->hos).length()) << setfill(' ') << '|' << endl;
     cout << "|Public Services: " << this->publService << setw(WIDTH-18-to_string(this->publService).length()) << setfill(' ') << '|' << endl;
     cout << "|Jobs: " << this->jobOpps << setw(WIDTH-7-to_string(this->jobOpps).length()) << setfill(' ') << '|' << endl;
