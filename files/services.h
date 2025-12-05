@@ -8,39 +8,44 @@ using namespace std;
 class research
 {
     // Class vars for Research
-    protected:
+    public:
+
+    // Functions
+
+        void doRes();
+        void showRes();
+        void res2(int opt);
+    
+    // Variables
+
         int constRes = 0;
         int milRes = 0;
         int ecoRes = 0;
         int dipRes = 0;
 
         research ();
-
-        // Fucns
-    public:
-    
-        void doRes();
-        void showRes();
-        void res2(int opt);
 };
 
 class services: public research
 {
     // Class Vars for Service
-    protected:
+
+    public:
+
+        // Functions
+
+        void createSer();
+        void showSer();
+        void ser2(int opt);
+
+        // Variables
+
         int eduCenter = 0;
         int hos = 0;
         int publService = 0;
         int jobOpps = 0;
 
         services ();
-
-        // Fucns
-    public:
-
-        void createSer();
-        void showSer();
-        void ser2(int opt);
 };
 
 #endif
