@@ -11,13 +11,13 @@ class research
     public:
 
     // Functions
-
         void doRes();
         void showRes();
         void res2(int opt);
     
-    // Variables
+    protected:
 
+    // Variables
         int constRes = 0;
         int milRes = 0;
         int ecoRes = 0;
@@ -38,6 +38,8 @@ class services: public research
         void showSer();
         void ser2(int opt);
 
+    protected:
+    
         // Variables
 
         int eduCenter = 0;
