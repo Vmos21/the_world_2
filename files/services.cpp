@@ -35,7 +35,7 @@ void services::createSer()
 
     int opt;
 
-    cout << "what would you like to build ? (Takes " << (1/(1+this->constRes))*120 << " secs)" << endl;
+    cout << "what would you like to build ? (Takes " << int ((1.0/(1+this->constRes))*120) << " secs)" << endl;
     cout << "1. Education Center" << "\n2. Hospital" << "\n3. Public Services" << "\n4. Jobs" << "\n5. Exit" << endl;
     cout << "\033[1;32m>>>\033[0m";
     cin >> opt;

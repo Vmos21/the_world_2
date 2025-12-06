@@ -94,27 +94,32 @@ void display_world()
     }
 }
 
-country getCountry(char id)
+country& getCountry(char id)
 {
-    for (country c: countArr)
+    for (country &c: countArr)
     {
         if (id == c.getId())
         {
             return c;
         }
     }
-    return country(" ", ' ');
+    
+    throw runtime_error("Not Found");
 }
 
 int countryDetails(char id)
 {
-    if (getCountry(id).getId() == ' ')
+    try 
+    {
+        displayCountry(getCountry(id));
+        return 0;
+    }
+
+    catch (const std::exception& e)
     {
         cout << "The country Does not exist :(" << endl;
         return 1;
     }
-    displayCountry(getCountry(id));
-    return 0;
 }
 
 void clearConsole()

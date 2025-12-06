@@ -42,7 +42,7 @@ class country: public services
 };
 
 void displayCountry(country count);
-country getCountry(char id);
+country& getCountry(char id);
 
 // Fucns from game
 
