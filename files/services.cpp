@@ -46,7 +46,7 @@ void services::createSer()
     }
     std::thread([this, opt]
         {
-            //this_thread::sleep_for(chrono::seconds((1/(1+this->constRes))*120));
+            this_thread::sleep_for(chrono::seconds((1/(1+this->constRes))*120));
             this->ser2(opt);
         }).join();
 }
@@ -105,7 +105,7 @@ void research::doRes()
 
     std::thread([this, opt]
         {
-            //this_thread::sleep_for(chrono::seconds((1/(1+this->constRes))*120));
+            this_thread::sleep_for(chrono::seconds((1/(1+this->constRes))*120));
             res2(opt);
         }).detach();
 }

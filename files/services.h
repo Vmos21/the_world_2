@@ -16,6 +16,8 @@ class research
         void res2(int opt);
     
 
+    protected:
+
     // Variables
         int constRes = 0;
         int milRes = 0;
@@ -47,6 +49,17 @@ class services: public research
         int jobOpps = 0;
 
         services ();
+};
+
+class resources
+{
+    protected:
+
+        int gold;
+        int oil;
+        int iron;
+        int copper;
+        int alum;
 };
 
 #endif
