@@ -62,4 +62,12 @@ class resources
         int alum;
 };
 
+class taxes
+{
+    protected:
+        
+        int wealth;
+        int sales; 
+};
+
 #endif
