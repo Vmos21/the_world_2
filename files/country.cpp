@@ -3,6 +3,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <thread>
 
 #include "fucns.h"
 #include "services.h"
@@ -13,6 +14,14 @@ using namespace std;
 #define WIDTH 40
 
 // Oject Functions
+
+void country::startSession()
+{
+    thread([]
+    {
+    
+    });
+}
 
 void country::setCid(char id)
 {

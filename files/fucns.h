@@ -19,7 +19,7 @@ class country: public services
         char cid;
         float strength = 0;
         int resources = 0;
-        float rating;
+        float rating = 50.0;
         int eco = 10000;
         float timeReq = 12000;
         float ecoRt = 0;
@@ -33,6 +33,7 @@ class country: public services
 
         void setCid(char id);
         void setPlayer();
+        void startSession();
         //void changeAttr(float stgth, int res, int eco);
         void getDetails();
         char getId();

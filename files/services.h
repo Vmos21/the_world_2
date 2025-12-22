@@ -67,7 +67,8 @@ class taxes
     protected:
         
         int wealth;
-        int sales; 
+        int sales;
+        int service; 
 };
 
 #endif
