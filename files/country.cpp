@@ -17,10 +17,19 @@ using namespace std;
 
 void country::startSession()
 {
-    thread([]
+    thread([this]
     {
-    
+        while (true)
+        {
+            this->gains();
+        }
     });
+}
+
+void country::gains()
+{
+    this->eco = this->eco+(this->eco*this->ecoRt);
+    this->pop = this->pop+(this->pop*this->popRt);
 }
 
 void country::setCid(char id)

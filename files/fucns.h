@@ -36,6 +36,7 @@ class country: public services
         void startSession();
         //void changeAttr(float stgth, int res, int eco);
         void getDetails();
+        void gains();
         char getId();
         int getRole();
 
