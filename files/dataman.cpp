@@ -3,14 +3,45 @@
 #include <string>
 
 using namespace std;
-// Learn the writing object
-void dataWrite()
+
+int dataWrite(string fname);
+auto dataMan(string fname);
+
+int main()
 {
-    auto data = 0;
-    return;
+    string fname;
+    cout << "Enter file name: ";
+    cin >> fname;
+
+    dataWrite(fname);
+
+    return 0;
+
 }
-// Leearn the reading object
-auto dataMan()
+
+
+// Learn the writing object
+int dataWrite(string fname)
+{
+    ofstream file(fname);
+
+    if (!file)
+    {
+        cout << "File not found" << endl;
+        return 1;
+    }
+
+    file << "[Info]";
+    file << "Name=Eric";
+    file << "ID=101";
+    file << "Grade=A";
+
+    cout << "Complete";
+
+    return 0;
+}
+// Learn the reading object
+auto dataMan(string fname)
 {
     return;
 }
