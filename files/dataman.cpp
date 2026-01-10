@@ -31,23 +31,26 @@ int dataWrite(string fname)
         return 1;
     }
 
-    file << "[Info]";
-    file << "Name=Eric";
-    file << "ID=101";
-    file << "Grade=A";
+    file << "[Info]" << endl;
+    file << "Name=Eric" << endl;
+    file << "ID=101" << endl;
+    file << "Grade=A" << endl;
 
-    cout << "Complete";
+    cout << "Complete" << endl;
 
     return 0;
 }
 // Learn the reading object
-auto dataMan(string fname)
+auto dataMan(string fname, string id)
 {
+    ifstream file(fname);
+
+    
     return;
 }
 
 // Based on that try to manage the data into a .ini 
 //file so that the content can be manimulatable and people can make mods for more fun
-// Also make it such that we have no  magic values and everything comes from the files
+// Also make it such that we have no magic values and everything comes from the files
 // EG: Like we have countries and a map make like the map and other details come 
 // from the .ini files only and not from the raw code itself
