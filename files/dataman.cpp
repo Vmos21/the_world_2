@@ -44,7 +44,6 @@ int dataWrite(string fname)
 auto dataMan(string fname, string id)
 {
     ifstream file(fname);
-
     
     return;
 }
