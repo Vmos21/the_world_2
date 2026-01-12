@@ -27,12 +27,12 @@ int dataWrite(string fname)
 
     if (!file)
     {
-        cout << "File not found" << endl;
+        cout << "File not found :(" << endl;
         return 1;
     }
 
     file << "[Info]" << endl;
-    file << "101:Eric:A" << endl;
+    file << "101=Eric:A" << endl;
     file << "ID=101" << endl;
     file << "Grade=A" << endl;
 
