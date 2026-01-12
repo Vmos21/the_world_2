@@ -32,7 +32,7 @@ int dataWrite(string fname)
     }
 
     file << "[Info]" << endl;
-    file << "Name=Eric" << endl;
+    file << "101:Eric:A" << endl;
     file << "ID=101" << endl;
     file << "Grade=A" << endl;
 
@@ -41,10 +41,36 @@ int dataWrite(string fname)
     return 0;
 }
 // Learn the reading object
-auto dataMan(string fname, string id)
+auto dataMan(string fname, string sec, string id)
 {
     ifstream file(fname);
-    
+    string line;
+    int secFlag = 0;
+    int idThere = 0;
+
+    while (getline(file, line))
+    {
+        if (line == "["+sec+"]")
+        {
+            secFlag = 1;
+        }
+        else if (secFlag == 1 && line[0] == '[')
+        {
+            break;
+        }
+        else if (secFlag == 1)
+        {
+            size_t pos = line.find('=');
+            if (pos != string::npos)
+            {
+                if (id == line.substr(pos+1))
+                {
+                    idThere == 1;
+                }
+            }
+        }
+    }
+
     return;
 }
 
