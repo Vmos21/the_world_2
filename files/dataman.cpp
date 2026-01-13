@@ -43,7 +43,7 @@ int dataWrite(string fname)
     return 0;
 }
 // Learn the reading object
-auto dataMan(string fname, string sec)
+auto dataMan(string fname)
 {
     ifstream file(fname);
     string line;
@@ -55,12 +55,12 @@ auto dataMan(string fname, string sec)
     if (!file)
     {
         cout << "File not found :(" << endl;
-        return 1
+        return 1;
     }
 
     while (getline(file, line))
     {
-        if (line == "["+sec+"]")
+        if (line == "[]")
         {
             secFlag = 1;
         }
@@ -73,12 +73,12 @@ auto dataMan(string fname, string sec)
             size_t pos = line.find('=');
             if (pos != string::npos)
             {
-                
+                return;
             }
         }
     }
 
-    return 
+    return;
 }
 
 // Based on that try to manage the data into a .ini 
