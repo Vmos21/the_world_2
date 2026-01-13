@@ -7,6 +7,7 @@ using namespace std;
 int dataWrite(string fname);
 auto dataMan(string fname);
 
+/*
 int main()
 {
     string fname;
@@ -18,7 +19,7 @@ int main()
     return 0;
 
 }
-
+*/
 
 // Learn the writing object
 int dataWrite(string fname)
@@ -36,17 +37,26 @@ int dataWrite(string fname)
     file << "ID=101" << endl;
     file << "Grade=A" << endl;
 
+
     cout << "Complete" << endl;
 
     return 0;
 }
 // Learn the reading object
-auto dataMan(string fname, string sec, string id)
+auto dataMan(string fname, string sec)
 {
     ifstream file(fname);
     string line;
+    
+    
     int secFlag = 0;
     int idThere = 0;
+
+    if (!file)
+    {
+        cout << "File not found :(" << endl;
+        return 1
+    }
 
     while (getline(file, line))
     {
@@ -56,22 +66,19 @@ auto dataMan(string fname, string sec, string id)
         }
         else if (secFlag == 1 && line[0] == '[')
         {
-            break;
+            return 0;
         }
         else if (secFlag == 1)
         {
             size_t pos = line.find('=');
             if (pos != string::npos)
             {
-                if (id == line.substr(pos+1))
-                {
-                    idThere == 1;
-                }
+                
             }
         }
     }
 
-    return;
+    return 
 }
 
 // Based on that try to manage the data into a .ini 

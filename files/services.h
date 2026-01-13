@@ -55,20 +55,22 @@ class resources
 {
     protected:
 
-        int gold;
-        int oil;
-        int iron;
-        int copper;
-        int alum;
+        int gold = 0;
+        int oil = 0;
+        int iron = 0;
+        int copper = 0;
+        int alum = 0;
 };
 
 class taxes
 {
     protected:
         
-        int wealth;
-        int sales;
-        int service; 
+        int wealth = 0;
+        int sales = 0;
+        int service = 0;
+
+        taxes();
 };
 
 #endif

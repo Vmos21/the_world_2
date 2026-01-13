@@ -6,3 +6,8 @@
 // also make such that the tax percentage will decrease the leader rating
 
 using namespace std;
+
+taxes::taxes()
+{
+    return;
+}
