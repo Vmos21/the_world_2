@@ -53,6 +53,8 @@ class services: public research
 
 class resources
 {
+    public:
+        void construction();
     protected:
 
         int gold = 0;
@@ -64,6 +66,9 @@ class resources
 
 class taxes
 {
+    public:
+        void changeTaxes();
+        
     protected:
         
         int wealth = 0;

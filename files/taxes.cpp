@@ -11,3 +11,8 @@ taxes::taxes()
 {
     return;
 }
+
+void taxes::changeTaxes()
+{
+    return;
+}

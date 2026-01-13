@@ -10,3 +10,19 @@ using namespace std;
 // Wood
 // And other resources
 // Start from stone age and rule type 
+
+// Analogies
+// Iron, Gold, .. - Mines
+// Wood - sawmill
+// Concrete - Factory
+// Food - Farms, Food Factory, Medicine, salt
+
+resources::resources()
+{
+    return;
+}
+
+void resources::construction()
+{
+    return;
+}
