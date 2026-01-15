@@ -62,13 +62,15 @@ class resources
         int iron = 0;
         int copper = 0;
         int alum = 0;
+
+        resources();
 };
 
 class taxes
 {
     public:
         void changeTaxes();
-        
+
     protected:
         
         int wealth = 0;

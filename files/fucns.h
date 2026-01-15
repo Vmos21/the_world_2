@@ -13,12 +13,11 @@ int countryDetails(char id);
 void clearConsole();
 
 // Classes and Functions from country.cpp
-class country: public services, public taxes
+class country: public services, public taxes, public resources
 {
     private:
         char cid;
         float strength = 0;
-        int resources = 0;
         float rating = 50.0;
         int eco = 10000;
         float timeReq = 12000;
