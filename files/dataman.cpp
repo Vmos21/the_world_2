@@ -1,27 +1,21 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "fucns.h"
 
 using namespace std;
 
-int dataWrite(string fname);
-auto dataMan(string fname);
+int dataMan(string fname);
 
-/*
 int main()
 {
-    string fname;
-    cout << "Enter file name: ";
-    cin >> fname;
-
-    dataWrite(fname);
-
+    string file = "file.ini";
+    auto idk = dataMan(file);
     return 0;
-
 }
-*/
 
 // Learn the writing object
+
 int dataWrite(string fname)
 {
     ofstream file(fname);
@@ -42,8 +36,10 @@ int dataWrite(string fname)
 
     return 0;
 }
+
 // Learn the reading object
-auto dataMan(string fname)
+
+int dataMan(string fname)
 {
     ifstream file(fname);
     string line;
@@ -60,7 +56,7 @@ auto dataMan(string fname)
 
     while (getline(file, line))
     {
-        if (line == "[]")
+        if (line == "[Info]")
         {
             secFlag = 1;
         }
@@ -73,16 +69,16 @@ auto dataMan(string fname)
             size_t pos = line.find('=');
             if (pos != string::npos)
             {
-                return;
+                cout << line.substr(pos+1) << endl;
             }
         }
     }
 
-    return;
+    return -1;
 }
 
 // Based on that try to manage the data into a .ini 
 //file so that the content can be manimulatable and people can make mods for more fun
 // Also make it such that we have no magic values and everything comes from the files
 // EG: Like we have countries and a map make like the map and other details come 
-// from the .ini files only and not from the raw code itself
+// from the .ini files only and not from the raw code itselfo
