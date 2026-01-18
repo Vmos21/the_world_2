@@ -26,7 +26,7 @@ class country: public services, public taxes, public resources
         int role = 0; // 0-> Neutral 1-> You 2-> Enemy
 
     public:
-        string name;
+        string name;                                                                                                
         int pop = 1000;
 
         void setCid(char id);
