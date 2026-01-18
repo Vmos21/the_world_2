@@ -17,9 +17,13 @@ class research
     
 
     protected:
-
     // Variables
-                                                                                           
+
+        int constRes = 0;
+        int milRes = 0;
+        int ecoRes = 0;
+        int dipRes = 0;                                                                       
+        
         research ();
 };
 
