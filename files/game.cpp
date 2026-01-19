@@ -54,6 +54,7 @@ void newGame()
                 clearConsole();
                 cout << "Player set" << endl;
                 startGame();
+                
                 return;
             }
         }   
@@ -124,10 +125,16 @@ void startGame()
             getCountry(id).showSer();
         }
 
-        // WE NEED TO ADD THREADS TO SREVICES OK !!
+        else if (input == "showall")
+        {
+            return;
+        }
+
+        // WE NEED TO ADD THREADS TO SREVICES
             // CREATED THREADS IN SERVICES.CPP
         // FIX IT
             // NEW PROBELM WE CANNOT UPDATE THE CLASS VARIABLES
+                // FiXED (HOPEFULLY)
 
         else
         {
