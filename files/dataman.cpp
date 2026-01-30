@@ -1,16 +1,18 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <vector>
 #include "fucns.h"
 
 using namespace std;
 
 int dataMan(string fname);
+void datamanProt1(string fname);
 
 int main()
 {
-    string file = "file.ini";
-    auto idk = dataMan(file);
+    string file = "map.ini";
+    datamanProt1(file);
     return 0;
 }
 
@@ -75,6 +77,62 @@ int dataMan(string fname)
     }
 
     return -1;
+}
+
+void datamanProt1(string fname) // Prototype 1
+{
+    ifstream file(fname);
+    string line;
+
+    if (!file)
+    {
+        cout << "File Not Found :(" << endl;
+        return;
+    }
+
+    if (fname == "map.ini")
+    {
+        int row = 0;
+        int col = 0;
+        vector<string> *map = {};
+
+        while (getline(file, line))
+        {
+            size_t eqpos = line.find('=');
+            if (eqpos != string::npos)
+            {
+                if (line.substr(0, eqpos) == "row")
+                {
+                    row = stoi(line.substr(eqpos+1));
+                }
+                else if (line.substr(0, eqpos) == "col")
+                {
+                    col = stoi(line.substr(eqpos+1));
+                }
+                else if (line.substr(0, eqpos) == "map")
+                {
+                    while (line != "")
+                    {
+                        size_t spos = line.find('{');
+                        size_t epos = line.find('}');
+
+                        map->push_back(line.substr(spos+2, epos));
+                        line = line.substr(epos+1);
+                    }
+                }
+            }
+        }
+        cout << row << "x" << col << endl;
+        for (int i = 0; i < map->size(); i++)
+        {
+            cout << (*map)[i] << endl;
+        }
+    }
+    else if (fname == "info.ini")
+    {
+
+    }
+    return;
 }
 
 // Based on that try to manage the data into a .ini 
