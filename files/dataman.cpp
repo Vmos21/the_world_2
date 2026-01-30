@@ -94,7 +94,7 @@ void datamanProt1(string fname) // Prototype 1
     {
         int row = 0;
         int col = 0;
-        vector<string> *map = {};
+        vector<string> map = {};
 
         while (getline(file, line))
         {
@@ -116,16 +116,17 @@ void datamanProt1(string fname) // Prototype 1
                         size_t spos = line.find('{');
                         size_t epos = line.find('}');
 
-                        map->push_back(line.substr(spos+2, epos));
+                        map.push_back(line.substr(spos+1, epos-1));
                         line = line.substr(epos+1);
+                        //cout << line << endl;
                     }
                 }
             }
         }
         cout << row << "x" << col << endl;
-        for (int i = 0; i < map->size(); i++)
+        for (int i = 0; i < map.size(); i++)
         {
-            cout << (*map)[i] << endl;
+            cout << (map)[i] << endl;
         }
     }
     else if (fname == "info.ini")
