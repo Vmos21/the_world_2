@@ -79,7 +79,7 @@ int dataMan(string fname)
     return -1;
 }
 
-void datamanProt1(string fname) // Prototype 1
+void datamanProt1(string fname) // Prototype-1
 {
     ifstream file(fname);
     string line;
@@ -126,7 +126,11 @@ void datamanProt1(string fname) // Prototype 1
         cout << row << "x" << col << endl;
         for (int i = 0; i < map.size(); i++)
         {
-            cout << (map)[i] << endl;
+            for (int j = 0; j < map[i].length(); j++)
+            {
+                cout << " " << (map)[i][j] << " ";
+            }
+            cout << endl;
         }
     }
     else if (fname == "info.ini")
