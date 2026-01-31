@@ -116,7 +116,7 @@ void datamanProt1(string fname) // Prototype-1
                         size_t spos = line.find('{');
                         size_t epos = line.find('}');
 
-                        map.push_back(line.substr(spos+1, epos-1));
+                        map.push_back(line.substr(spos+1, (epos-1)-(spos+1)));
                         line = line.substr(epos+1);
                         //cout << line << endl;
                     }
