@@ -45,7 +45,7 @@ Various Functions Present in the game
   - No. of Education centers
   - No. of Hospitals
 
-//- Research
+<!-- Research
    //- Lol
    //- Loll
-
+-->
