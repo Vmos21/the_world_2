@@ -2,12 +2,13 @@
 #include <fstream>
 #include <string>
 #include <vector>
-#include "fucns.h"
+#include "agent.h"
 
 using namespace std;
 
 int dataMan(string fname);
 void datamanProt1(string fname);
+void datamanProt2(string fname, vector<string> &map);
 
 int main()
 {
@@ -142,8 +143,37 @@ void datamanProt1(string fname) // Prototype-1 -> Get's anything and everything 
     return;
 }
 
-void datamanProt2(string fname) // Prototype-2 -> Make dynamic functions
+void datamanProt2(string fname, vector<string> &map) // Prototype-2 -> Make dynamic functions
 {
+    ifstream file(fname);
+    string rows;
+
+    if (!file)
+    {
+        cout << "File not found" << endl;
+        return;
+    }
+
+    while (getline(file, rows))
+    {
+        size_t eqpos = rows.find('=');
+        if (eqpos != string::npos)
+        {
+            if (rows.substr(0, eqpos) == "map")
+            {
+                while (rows != "")
+                {
+                    size_t spos = rows.find('{');
+                    size_t epos = rows.find('}');
+
+                    map.push_back(rows.substr(spos+1, (epos-1)-(spos+1)));
+                    rows = rows.substr(epos+1);
+                }
+                return;
+            }
+        }
+    }
+
     return;
 }
 
