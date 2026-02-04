@@ -79,8 +79,8 @@ int dataMan(string fname)
     return -1;
 }
 
-void datamanProt1(string fname) // Prototype-1
-{
+void datamanProt1(string fname) // Prototype-1 -> Get's anything and everything in a section,
+{                               // But I want only specific one to be brought out -> More specifically addresses
     ifstream file(fname);
     string line;
 
@@ -118,12 +118,13 @@ void datamanProt1(string fname) // Prototype-1
 
                         map.push_back(line.substr(spos+1, (epos-1)-(spos+1)));
                         line = line.substr(epos+1);
-                        //cout << line << endl;
+                        // cout << line << endl;
                     }
                 }
             }
         }
-        cout << row << "x" << col << endl;
+        // cout << row << "x" << col << endl;
+        /* 
         for (int i = 0; i < map.size(); i++)
         {
             for (int j = 0; j < map[i].length(); j++)
@@ -132,11 +133,17 @@ void datamanProt1(string fname) // Prototype-1
             }
             cout << endl;
         }
+        */
     }
     else if (fname == "info.ini")
     {
 
     }
+    return;
+}
+
+void datamanProt2(string fname) // Prototype-2 -> Make dynamic functions
+{
     return;
 }
 
