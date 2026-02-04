@@ -1,5 +1,6 @@
 #include <iostream>
 #include "fucns.h"
+#include "agent.h"
 #include "services.h"
 #include <string>
 #include <algorithm>
@@ -10,6 +11,19 @@ char id;
 
 void newGame()
 {
+    string file;
+    cout << "Which file does the map exist in ? (Default => map.ini):";
+    cin >> file;
+
+    if (file == "\n")
+    {
+        datamanProt2("files/map.ini", world);
+    }
+    else
+    {
+        datamanProt2(file, world);
+    }
+
     display_world();
 
     char playeropt;

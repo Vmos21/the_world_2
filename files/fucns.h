@@ -4,6 +4,8 @@
 // Header files
 #include <string>
 #include "services.h"
+#include "agent.h"
+#include <vector>
 
 using namespace std;
 
@@ -13,6 +15,9 @@ int countryDetails(char id);
 void clearConsole();
 
 // Classes and Functions from country.cpp
+
+extern vector<string> world;
+
 class country: public services, public taxes, public resources
 {
     private:

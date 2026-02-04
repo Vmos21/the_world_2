@@ -5,6 +5,7 @@
 #include <string.h>
 #include <strings.h>
 #include "files/fucns.h"
+#include "files/agent.cpp"
 //#include "files/country.h"
 
 using namespace std;

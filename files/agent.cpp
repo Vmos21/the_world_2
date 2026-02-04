@@ -5,6 +5,7 @@ using namespace std;
 void getData(string fname, int &row, int &col);
 void getData(string fname, vector<string> &map);
 
+/*
 int main()
 {
     cout << "----------" << endl;
@@ -12,7 +13,7 @@ int main()
     cout << "----------" << endl;
     return 0;
 }
-
+*/
 
 // The agent is supposed to act as a buffer between Manip and whatever the file be.
 // Based on the file and the return types we gotta connect the ends.

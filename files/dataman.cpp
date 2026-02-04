@@ -10,12 +10,14 @@ int dataMan(string fname);
 void datamanProt1(string fname);
 void datamanProt2(string fname, vector<string> &map);
 
+/*
 int main()
 {
     string file = "map.ini";
     datamanProt1(file);
     return 0;
 }
+*/
 
 // Learn the writing object
 

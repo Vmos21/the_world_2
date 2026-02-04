@@ -34,7 +34,6 @@ vector<string> world =
 };
 */
 vector<string> world;
-datamanProt2("map.ini", &world);
 
 // Functions
 
