@@ -9,6 +9,7 @@ using namespace std;
 int dataMan(string fname);
 void datamanProt1(string fname);
 void datamanProt2(string fname, vector<string> &map);
+void datamanProt2(string fname, int &row, int &col);
 
 /*
 int main()
@@ -145,8 +146,8 @@ void datamanProt1(string fname) // Prototype-1 -> Get's anything and everything 
     return;
 }
 
-void datamanProt2(string fname, vector<string> &map) // Prototype-2 -> Make dynamic functions
-{
+void datamanProt2(string fname, vector<string> &map) // Prototype-2 -> Make dynamic functions;
+{                                                    // Prototype Success :) => Attempting to repeat the same for other datas;
     ifstream file(fname);
     string rows;
 
@@ -179,6 +180,35 @@ void datamanProt2(string fname, vector<string> &map) // Prototype-2 -> Make dyna
     return;
 }
 
+void datamanProt2(string fname, int &row, int &col) // Integer functions;
+{
+    ifstream file(fname);
+    string rows;
+
+    if (!file)
+    {
+        cout << "File not found" << endl;
+        return;
+    }
+
+    while (getline(file, rows))
+    {
+        size_t eqpos = rows.find('=');
+        if (eqpos != string::npos)
+        {
+            if (rows.substr(0, eqpos) == "row")
+            {
+                row = stoi(rows.substr(eqpos+1));
+            }
+            else if (rows.substr(0, eqpos) == "col")
+            {
+                col = stoi(rows.substr(0, eqpos+1));
+            }
+        }
+    }
+
+    return;
+}
 // Based on that try to manage the data into a .ini 
 //file so that the content can be manimulatable and people can make mods for more fun
 // Also make it such that we have no magic values and everything comes from the files

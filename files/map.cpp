@@ -12,8 +12,8 @@ using namespace std;
 
 // Definitions
 
-#define ROW 14
-#define COL 24
+int ROW;
+int COL;
 
 country countArr[7] = {
     country("North America", '#'),
@@ -26,6 +26,7 @@ country countArr[7] = {
 };
 
 // World Map
+
 /*
 vector<string> world = 
 {
@@ -33,6 +34,7 @@ vector<string> world =
     "...@@...%%%........***..", "...@@...%%%%............", "...@@...%%%%........??..", "....@....%%........????.", "....@....%%........????.", ".........%%........?..??", "........................"
 };
 */
+
 vector<string> world;
 
 // Functions
