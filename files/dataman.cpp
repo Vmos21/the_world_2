@@ -11,14 +11,18 @@ void datamanProt1(string fname);
 void datamanProt2(string fname, vector<string> &map);
 void datamanProt2(string fname, int &row, int &col);
 
-/*
+
 int main()
 {
     string file = "map.ini";
-    datamanProt1(file);
+    int row, col;
+    datamanProt2(file, row, col);
+
+    cout << row << "x" << col << endl;
+
     return 0;
 }
-*/
+
 
 // Learn the writing object
 
@@ -202,7 +206,7 @@ void datamanProt2(string fname, int &row, int &col) // Integer functions;
             }
             else if (rows.substr(0, eqpos) == "col")
             {
-                col = stoi(rows.substr(0, eqpos+1));
+                col = stoi(rows.substr(eqpos+1));
             }
         }
     }
