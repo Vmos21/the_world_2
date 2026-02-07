@@ -10,8 +10,9 @@ int dataMan(string fname);
 void datamanProt1(string fname);
 void datamanProt2(string fname, vector<string> &map);
 void datamanProt2(string fname, int &row, int &col);
+int filex(string fname);
 
-
+/*
 int main()
 {
     string file = "map.ini";
@@ -22,6 +23,7 @@ int main()
 
     return 0;
 }
+*/
 
 
 // Learn the writing object
@@ -213,6 +215,17 @@ void datamanProt2(string fname, int &row, int &col) // Integer functions;
 
     return;
 }
+
+int filex(string fname) // Check if file exists oder nicht
+{
+    ifstream file(fname);
+    if (!file)
+    {
+        return 1;
+    }
+    return 0;
+}
+
 // Based on that try to manage the data into a .ini 
 //file so that the content can be manimulatable and people can make mods for more fun
 // Also make it such that we have no magic values and everything comes from the files

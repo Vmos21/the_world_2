@@ -48,7 +48,7 @@ void services::createSer()
         {
             this_thread::sleep_for(chrono::seconds((1/(1+this->constRes))*120));
             this->ser2(opt);
-        }).join();
+        }).detach();
 }
 
 void services::ser2(int opt)
@@ -59,16 +59,16 @@ void services::ser2(int opt)
             break;
 
         case 2: this->hos++; cout << "Hospital has been built." << endl;
-            return;
+            break;
             
         case 3: this->publService++; cout << "Public Services has been built." << endl;
-            return;
+            break;
 
         case 4: this->jobOpps++; cout << "More Jobs are created." << endl;
-            return;
+            break;
 
         default: cout << "No Command assigned." << endl;
-            return;
+            break;
     }
 }
 

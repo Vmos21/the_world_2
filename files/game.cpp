@@ -18,10 +18,12 @@ void newGame()
     if (file == "\n")
     {
         datamanProt2("files/map.ini", world);
+        datamanProt2("files/map.ini", ROW, COL);
     }
     else
     {
-        datamanProt2(file, world);
+        datamanProt2("files/"+file, world);
+        datamanProt2("files/"+file, ROW, COL);
     }
 
     display_world();

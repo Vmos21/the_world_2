@@ -14,9 +14,13 @@ void display_world();
 int countryDetails(char id);
 void clearConsole();
 
-// Classes and Functions from country.cpp
+// Moddable files
 
+extern int ROW;
+extern int COL;
 extern vector<string> world;
+
+// Classes and Functions from country.cpp
 
 class country: public services, public taxes, public resources
 {
