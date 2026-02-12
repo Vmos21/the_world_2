@@ -12,7 +12,7 @@ char id;
 void newGame()
 {
     string file;
-    cout << "Which file does the map exist in ? (Default => map.ini):";
+    cout << "Which file does the map exist in ? (Default => files/map.ini):";
     cin >> file;
 
     if (file == "\n")

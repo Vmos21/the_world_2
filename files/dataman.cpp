@@ -220,6 +220,24 @@ void datamanProt2(string fname, int &row, int &col) // Integer functions for rat
 
 void datamanProt2(string fname, country &counArr)
 {
+    ifstream file(fname);
+    string rows;
+
+    if (!file)
+    {
+        cout << "File not found" << endl;
+        return;
+    }
+
+    while (getline(file, rows))
+    {
+        size_t eqpos = rows.find('=');
+        if (eqpos == string::npos)
+        {
+            
+        }
+    }
+
     return;
 }
 
@@ -228,13 +246,13 @@ int filex(string fname) // Check if file exists oder nicht
     ifstream file(fname);
     if (!file)
     {
-        return 1;
+        return 0;
     }
-    return 0;
+    return 1;
 }
 
 // Based on that try to manage the data into a .ini 
 //file so that the content can be manimulatable and people can make mods for more fun
 // Also make it such that we have no magic values and everything comes from the files
 // EG: Like we have countries and a map make like the map and other details come 
-// from the .ini files only and not from the raw code itselfo
+// from the .ini files only and not from the raw code itself
