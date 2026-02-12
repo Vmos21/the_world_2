@@ -3,6 +3,7 @@
 #include <string>
 #include <vector>
 #include "agent.h"
+#include "fucns.h"
 
 using namespace std;
 
@@ -10,6 +11,7 @@ int dataMan(string fname);
 void datamanProt1(string fname);
 void datamanProt2(string fname, vector<string> &map);
 void datamanProt2(string fname, int &row, int &col);
+void datamanProt2(string fname, country &counArr);
 int filex(string fname);
 
 /*
@@ -186,7 +188,7 @@ void datamanProt2(string fname, vector<string> &map) // Prototype-2 -> Make dyna
     return;
 }
 
-void datamanProt2(string fname, int &row, int &col) // Integer functions;
+void datamanProt2(string fname, int &row, int &col) // Integer functions for ratio aspect;
 {
     ifstream file(fname);
     string rows;
@@ -213,6 +215,11 @@ void datamanProt2(string fname, int &row, int &col) // Integer functions;
         }
     }
 
+    return;
+}
+
+void datamanProt2(string fname, country &counArr)
+{
     return;
 }
 
