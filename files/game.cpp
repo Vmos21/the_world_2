@@ -19,6 +19,7 @@ void newGame()
     {
         datamanProt2("files/map.ini", world);
         datamanProt2("files/map.ini", ROW, COL);
+        //datamanProt2("files/map.ini", countarr);
     }
     else
     {

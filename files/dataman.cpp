@@ -234,7 +234,7 @@ void datamanProt2(string fname, country &counArr)
         size_t eqpos = rows.find('=');
         if (eqpos == string::npos)
         {
-            
+            return;
         }
     }
 
