@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+//#include "fucns.h"
 using namespace std;
 
 void getData(string fname, int &row, int &col);

@@ -12,19 +12,23 @@ char id;
 void newGame()
 {
     string file;
-    cout << "Which file does the map exist in ? (Default => files/map.ini):";
-    cin >> file;
-
-    if (file == "\n")
+    while (true)
     {
-        datamanProt2("files/map.ini", world);
-        datamanProt2("files/map.ini", ROW, COL);
-        //datamanProt2("files/map.ini", countarr);
-    }
-    else
-    {
-        datamanProt2("files/"+file, world);
-        datamanProt2("files/"+file, ROW, COL);
+        cout << "Which file does the map exist in ? (Default => files/map.ini):";
+        cin >> file;
+        if (file == "\n")
+        {
+            datamanProt2("files/map.ini", world);
+            datamanProt2("files/map.ini", ROW, COL);
+            //datamanProt2("files/map.ini", countarr);
+            break;
+        }
+        else if (filex("files/"+file) != 0)
+            {
+                datamanProt2("files/"+file, world);
+                datamanProt2("files/"+file, ROW, COL);
+                break;
+            }
     }
 
     display_world();

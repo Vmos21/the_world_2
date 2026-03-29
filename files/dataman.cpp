@@ -96,11 +96,13 @@ void datamanProt1(string fname) // Prototype-1 -> Get's anything and everything 
     ifstream file(fname);
     string line;
 
+    /*
     if (!file)
     {
         cout << "File Not Found :(" << endl;
         return;
     }
+    */
 
     if (fname == "map.ini")
     {
@@ -159,11 +161,13 @@ void datamanProt2(string fname, vector<string> &map) // Prototype-2 -> Make dyna
     ifstream file(fname);
     string rows;
 
+    /*
     if (!file)
     {
         cout << "File not found" << endl;
         return;
     }
+    */
 
     while (getline(file, rows))
     {
@@ -193,11 +197,13 @@ void datamanProt2(string fname, int &row, int &col) // Integer functions for rat
     ifstream file(fname);
     string rows;
 
+    /*
     if (!file)
     {
         cout << "File not found" << endl;
         return;
     }
+    */
 
     while (getline(file, rows))
     {
@@ -223,11 +229,13 @@ void datamanProt2(string fname, country &counArr)
     ifstream file(fname);
     string rows;
 
+    /*
     if (!file)
     {
         cout << "File not found" << endl;
         return;
     }
+    */
 
     while (getline(file, rows))
     {
@@ -246,6 +254,7 @@ int filex(string fname) // Check if file exists oder nicht
     ifstream file(fname);
     if (!file)
     {
+        cout << "The file does not exist.\n";
         return 0;
     }
     return 1;
