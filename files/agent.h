@@ -7,12 +7,14 @@
 #include <vector>
 #include "fucns.h"
 
+class country;
+
 using namespace std;
 
 int dataMan(string fname);
 void datamanProt1(string fname);
 void datamanProt2(string fname, vector<string> &map);
 void datamanProt2(string fname, int &row, int &col);
-//void datamanProt2(string fname, country &counArr);
+void datamanProt2(string fname, vector<country> &arr);
 int filex(string fname);
 #endif

@@ -15,12 +15,15 @@ void newGame()
     while (true)
     {
         cout << "Which file does the map exist in ? (Default => files/map.ini):";
-        cin >> file;
-        if (file == "\n")
+
+        cin.ignore();
+        getline(cin, file);
+
+        if (file.empty())
         {
             datamanProt2("files/map.ini", world);
             datamanProt2("files/map.ini", ROW, COL);
-            //datamanProt2("files/map.ini", countarr);
+            datamanProt2("files/map.ini", countArr);
             break;
         }
         else if (filex("files/"+file) != 0)

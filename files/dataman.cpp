@@ -11,7 +11,7 @@ int dataMan(string fname);
 void datamanProt1(string fname);
 void datamanProt2(string fname, vector<string> &map);
 void datamanProt2(string fname, int &row, int &col);
-void datamanProt2(string fname, country &counArr);
+void datamanProt2(string fname, vector<country> &arr);
 int filex(string fname);
 
 /*
@@ -19,9 +19,16 @@ int main()
 {
     string file = "map.ini";
     int row, col;
-    datamanProt2(file, row, col);
+    vector<country> arr;
 
-    cout << row << "x" << col << endl;
+    datamanProt2(file, arr);
+
+    for (int i = 0; i < arr.size(); i++)
+    {
+        displayCountry(arr[i]);
+    }
+
+    //cout << row << "x" << col << endl;
 
     return 0;
 }
@@ -224,7 +231,7 @@ void datamanProt2(string fname, int &row, int &col) // Integer functions for rat
     return;
 }
 
-void datamanProt2(string fname, country &counArr)
+void datamanProt2(string fname, vector<country> &arr) // for getting the country array itself
 {
     ifstream file(fname);
     string rows;
@@ -240,9 +247,15 @@ void datamanProt2(string fname, country &counArr)
     while (getline(file, rows))
     {
         size_t eqpos = rows.find('=');
-        if (eqpos == string::npos)
+        if (eqpos != string::npos)
         {
-            return;
+            if (rows.substr(0, eqpos) == "c")
+            {
+                //char id = rows[eqpos+2];
+                //string name = rows.substr(eqpos+3);
+                arr.push_back(country(rows.substr(eqpos+3), rows[eqpos+2]));
+                //cout << "Added" << endl;
+            }
         }
     }
 

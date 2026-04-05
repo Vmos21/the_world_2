@@ -49,7 +49,7 @@ class country: public services, public taxes, public resources
 extern int ROW;
 extern int COL;
 extern vector<string> world;
-extern country counArr;
+extern vector<country> countArr;
 
 // Out Of Game Operations
 
